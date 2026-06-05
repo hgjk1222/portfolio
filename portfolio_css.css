@@ -1,0 +1,152 @@
+/* ========== GLOBAL BASE ========== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111215;
+    color: #ffffff;
+    background-image: radial-gradient(circle at 30% 40%, rgb(44 42 57 / 0.98), transparent 60%), radial-gradient(circle at 70% 30%, rgb(23 17 169 / 0.67), transparent 50%), radial-gradient(circle at 50% 70%, rgb(7 25 172 / 0.94), transparent 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ========== HERO / LAYOUT ========== */
+
+.hero {
+    padding: 120px 40px;
+    text-align: center;
+}
+
+    .hero h1 {
+        font-size: 48px;
+        margin: 0;
+    }
+
+    .hero p {
+        opacity: 0.7;
+    }
+
+/* ========== GLASS CARD SYSTEM ========== */
+
+.card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 14px;
+    padding: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 20px rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+}
+
+    .card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 30px rgba(255,255,255,0.15);
+    }
+
+/* ========== GRID LAYOUT ========== */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== OPTIONAL UI (你的原风格升级版 glow) ========== */
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 6px rgba(255,255,255,0.15), 0 0 12px rgba(255,255,255,0.10);
+    }
+
+    50% {
+        box-shadow: 0 0 12px rgba(255,255,255,0.3), 0 0 24px rgba(255,255,255,0.2);
+    }
+}
+
+.glow-card {
+    animation: glow 2.5s infinite ease-in-out;
+}
+
+/* ========== BUTTONS ========== */
+
+button {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    button:hover {
+        background: rgba(255,255,255,0.25);
+        box-shadow: 0 0 12px rgba(255,255,255,0.3);
+    }
+
+/* ========== LINKS ========== */
+
+a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+    a:hover {
+        opacity: 1;
+    }
+
+/* ========== NAV (optional future use) ========== */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ========== CARD VARIANT (like your original acid style) ========== */
+
+.acid {
+    background: linear-gradient( 180deg, rgba(255,255,255,0.15), rgba(255,255,255,0.03) );
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+    .acid:hover {
+        transform: scale(1.02);
+    }
+
+/* ========== INPUTS ========== */
+
+input, textarea {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* ========== SCROLLBAR ========== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.4);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.05);
+}
